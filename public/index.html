@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Room Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <div class="room-header">
+      <span>Room ID: <span id="roomDisplay"></span></span>
+      <button onclick="connectWallet()" id="walletBtn">Connect Wallet</button>
+      <span id="walletDisplay"></span>
+    </div>
+    <div class="messages" id="chatArea"></div>
+    <form id="chat-form">
+      <button type="button" onclick="document.getElementById('fileInput').click()">📎</button>
+      <input type="file" id="fileInput" style="display:none" />
+      <button type="button" id="startRecording">🎤</button>
+      <input type="text" id="messageInput" placeholder="Type your message..." autocomplete="off" />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
